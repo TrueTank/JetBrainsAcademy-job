@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat&display=swap');
+
+body { 
+    background-color: #f2ebff;
+}
+
+.main__container {
+    max-width: 1440px;
+    margin-left: 90px;
+    margin-right: 91px;
+}
+
+.nav { 
+    max-width: 1440px;
+    margin-left: 90px;
+    margin-top: 23px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.Org__Title { 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+}
+
+.Log { 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+}
+
+a { 
+    text-decoration: none;
+}
+
+video { 
+    display: flex;
+    width: 900px;
+    height: 530px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.box { 
+    margin-top: 135px;
+    max-width: 1440px;
+    display: flex;
+}
