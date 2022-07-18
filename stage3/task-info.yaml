@@ -1,8 +1,0 @@
-type: edu
-files:
-- name: src/index.html
-  visible: true
-- name: test/test.js
-  visible: false
-- name: src/style.css
-  visible: true
