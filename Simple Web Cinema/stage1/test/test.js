@@ -8,13 +8,40 @@ class Test extends StageTest {
 
     tests = [
         this.page.execute(() => {
-            // test #1
+            let navElements = document.getElementsByClassName('nav');  
+            let orgElements = document.getElementsByClassName('Org__Title'); 
+            let logElements = document.getElementsByClassName('Log'); 
+            
+            if (navElements.length === 0 && orgElements === 0 && logElements === 0) {
+                return wrong(`Cannot find element with class 'nav', 'Org__Title' and 'Log`);
+            } else if (navElements > 1) {
+                return wrong(`Found ${navElements.length} elements with class 'nav'` +
+                    `, the page should contain just a single such element.`);
+            }       
+
+            return correct()
         }),
         this.page.execute(() => {
-            // test #2
+            let containerElements = document.getElementsByClassName('main__container');  
+            let boxElements = document.getElementsByClassName('box'); 
+            let videocontainerlements = document.getElementsByClassName('video-container'); 
+            
+            if (containerElements === 0 && boxElements === 0 && videocontainerlements === 0) {
+                return wrong(`Cannot find element with class 'main__container', 'box' and 'video-container`);
+            } else if (containerElements > 1) {
+                return wrong(`Found ${containerElements.length} elements with class 'nav'` +
+                    `, the page should contain just a single such element.`);
+            }       
+
+            return correct()
         }),
         this.page.execute(() => {
-            // test #3
+            const bodyStyles = await body.getStyles()
+
+            if (bodyStyles.backgroundColor !== '#f2ebff') {
+                return wrong('wrong backgroundColor')
+            } else 
+                return correct()
         })
     ]
 
